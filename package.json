@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
-		"build": "lerna run clean && lerna run tsc"
+		"build": "lerna run clean && lerna run tsc",
+		"prepublish": "yarn build"
 	},
 	"repository": {
 		"type": "git",
