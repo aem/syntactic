@@ -2,23 +2,29 @@
 	"name": "@syntactic/ast-js",
 	"version": "0.0.1",
 	"description": "The library of AST nodes for Syntactic's generator",
-	"types": "lib/*.d.ts",
-	"scripts": {
-		"test": "jest",
-		"test:watch": "jest --watch",
-		"clean": "rm -rf lib",
-		"tsc": "tsc"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/aem/syntactic.git"
-	},
 	"author": "Adam Markon <adam@markon.codes>",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/aem/syntactic/issues"
 	},
 	"homepage": "https://github.com/aem/syntactic#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aem/syntactic.git"
+	},
+	"main": "lib/index.js",
+	"ts:main": "src/index.ts",
+	"types": "lib/*.d.ts",
+	"directories": {
+		"lib": "lib",
+		"test": "**/__tests__"
+	},
+	"scripts": {
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"clean": "rm -rf lib",
+		"tsc": "tsc"
+	},
 	"dependencies": {
 		"@syntactic/core": "^0.0.1",
 		"@syntactic/types": "^0.0.1"
@@ -29,5 +35,9 @@
 		"jest": "^25.2.4",
 		"ts-jest": "^25.2.1",
 		"typescript": "^3.8.3"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
 	}
 }

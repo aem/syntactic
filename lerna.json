@@ -9,6 +9,8 @@
 		"access": "public"
 	},
 	"npmClient": "yarn",
-	"packages": ["packages/*"],
+	"packages": [
+		"packages/*"
+	],
 	"version": "0.0.1"
 }
