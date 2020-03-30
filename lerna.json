@@ -1,10 +1,14 @@
 {
-  "command": {
-    "version": {
-      "message": "chore(release): publish %s"
-    }
-  },
-  "npmClient": "yarn",
-  "packages": ["packages/*"],
-  "version": "0.0.1"
+	"command": {
+		"version": {
+			"message": "chore(release): publish %s"
+		}
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+	},
+	"npmClient": "yarn",
+	"packages": ["packages/*"],
+	"version": "0.0.1"
 }
