@@ -1,9 +1,14 @@
 {
 	"extends": "../../tsconfig.json",
+	"include": ["src", "types", "test"],
+	"exclude": ["node_modules"],
 	"compilerOptions": {
-		"outDir": "./lib",
-		"typeRoots": ["./node_modules/@types", "./node_modules/@syntactic"],
-		"declaration": true
-	},
-	"include": ["./src"]
+		"baseUrl": "./",
+		"rootDir": "./src",
+		"declarationDir": "./dist",
+		"downlevelIteration": true,
+		"paths": {
+			"*": ["src/*", "node_modules/*"]
+		}
+	}
 }

@@ -1,5 +1,5 @@
 import * as syntactic from '@syntactic/core';
-import { Identifier } from '../Identifier';
+import { Identifier } from '../src/Identifier';
 
 describe('Identifier', () => {
 	it('outputs the proper identifier', () => {

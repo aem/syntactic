@@ -1,12 +1,14 @@
 {
-	"name": "syntactic",
-	"version": "0.0.1",
+	"private": true,
+	"name": "root",
 	"description": "A JSX-based templating and generation tool",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest",
-		"build": "lerna run clean && lerna run tsc",
-		"prepublish": "yarn build"
+		"test": "lerna run test --stream",
+		"build": "lerna run build",
+		"prepublish": "yarn build",
+		"start": "lerna run start --stream --parallel",
+		"lint": "lerna run lint"
 	},
 	"repository": {
 		"type": "git",
@@ -17,20 +19,25 @@
 		"templates",
 		"jsx"
 	],
+	"workspaces": [
+		"packages/*"
+	],
 	"author": "Adam Markon <adam@markon.codes>",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/aem/syntactic/issues"
 	},
 	"homepage": "https://github.com/aem/syntactic#readme",
-	"dependencies": {
-		"prettier": "^2.0.2",
-		"typescript": "^3.8.3"
-	},
+	"dependencies": {},
 	"devDependencies": {
-		"@types/jest": "^25.1.4",
-		"jest": "^25.2.4",
+		"@types/jest": "^25.2.1",
+		"babel-jest": "26.0.1",
+		"husky": "4.2.5",
+		"jest": "^24.9.0",
 		"lerna": "^3.20.2",
-		"ts-jest": "^25.2.1"
+		"ts-jest": "^24.3.0",
+		"tsdx": "0.13.2",
+		"tslib": "1.11.2",
+		"typescript": "3.8.3"
 	}
 }

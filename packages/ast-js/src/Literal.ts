@@ -10,7 +10,7 @@ const nodeType = 'Literal';
 
 export const Literal: AstNode<Props> = ({ value, regex }) => {
 	if (typeof value === 'undefined') {
-		if (!regex) {
+		if (!regex || !regex.pattern) {
 			throw new Error(`[${nodeType}] must supply a value or a regex`);
 		}
 	}

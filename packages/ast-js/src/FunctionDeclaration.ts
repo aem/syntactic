@@ -1,4 +1,4 @@
-import { StatementExpression } from './ExportDeclaration';
+// import { StatementExpression } from './ExportDeclaration';
 
 interface Props {
 	name?: string;
